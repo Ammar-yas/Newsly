@@ -1,8 +1,10 @@
-package com.intdv.newsly;
+package com.intdv.newsly.activities;
+
+import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+import com.intdv.newsly.R;
 
 public class MainActivity extends AppCompatActivity {
 
