@@ -47,5 +47,13 @@ dependencies {
     //      ----- Picasso -----
     implementation 'com.squareup.picasso:picasso:2.71828'
 
+    //      ----- Fast Android Networking library -----
+    implementation 'com.amitshekhar.android:android-networking:1.0.2'
+    implementation 'com.amitshekhar.android:jackson-android-networking:1.0.2'
+
+
+    //      ----- GSON library -----
+    implementation 'com.google.code.gson:gson:2.8.5'
+
 
 }
