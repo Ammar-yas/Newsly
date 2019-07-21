@@ -58,4 +58,8 @@ dependencies {
     //      ----- Chrome Custom tabs Library -----
     implementation 'com.android.support:customtabs:28.0.0'
 
+    //      ----- Lottie library android -----
+    implementation 'com.airbnb.android:lottie:3.0.7'
+
+
 }
