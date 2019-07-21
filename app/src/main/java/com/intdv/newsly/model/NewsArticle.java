@@ -1,16 +1,20 @@
 package com.intdv.newsly.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class NewsArticle {
 
+    @SerializedName("title")
     private String title;
+    @SerializedName("description")
     private String description;
+    @SerializedName("url")
     private String url;
+    @SerializedName("urlToImage")
     private String imageUrl;
 
-
-
     public String getTitle() {
-        return "Breaking news test title";
+        return title;
     }
 
     public void setTitle(String title) {
@@ -18,7 +22,7 @@ public class NewsArticle {
     }
 
     public String getDescription() {
-        return "This is a long descriptionThis is a long descriptionThis is a long descriptionThis is a long descriptionThis is a long description";
+        return description;
     }
 
     public void setDescription(String description) {
@@ -34,7 +38,7 @@ public class NewsArticle {
     }
 
     public String getImageUrl() {
-        return "https://cdn.cnn.com/cnnnext/dam/assets/190718132701-netflix-reed-hastings-rome-file-super-tease.jpg";
+        return imageUrl;
     }
 
     public void setImageUrl(String imageUrl) {

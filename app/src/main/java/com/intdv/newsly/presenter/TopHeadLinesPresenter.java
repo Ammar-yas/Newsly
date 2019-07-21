@@ -5,16 +5,10 @@ import android.util.Log;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
-import com.androidnetworking.interfaces.JSONArrayRequestListener;
-import com.androidnetworking.interfaces.JSONObjectRequestListener;
 import com.androidnetworking.interfaces.StringRequestListener;
 import com.google.gson.Gson;
 import com.intdv.newsly.model.ResponseModel;
 import com.intdv.newsly.view.TopHeadlinesView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class TopHeadLinesPresenter extends BasePresenter {
 
@@ -27,7 +21,7 @@ public class TopHeadLinesPresenter extends BasePresenter {
     }
 
     public void getTopHeadlines(){
-        AndroidNetworking.get("https://newsapi.org/v2/top-headlines?country=us&apiKey=")
+        AndroidNetworking.get("https://newsapi.org/v2/top-headlines")
                 .addQueryParameter("sources", "ars-technica")
                 .addQueryParameter("apiKey", APP_TOKEN)
                 .build()
