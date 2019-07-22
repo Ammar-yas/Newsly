@@ -32,6 +32,12 @@ public class TopHeadlinesAdapter extends RecyclerView.Adapter<TopHeadlinesAdapte
         this.articles = articles;
     }
 
+    public void updateHeadlines(List<NewsArticle> newsArticles, DataUpdatedListener updatedListener) {
+        this.articles = newsArticles;
+        notifyDataSetChanged();
+        updatedListener.onDataUpdated();
+    }
+
     @NonNull
     @Override
     public HeadLineViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -53,10 +59,10 @@ public class TopHeadlinesAdapter extends RecyclerView.Adapter<TopHeadlinesAdapte
     }
 
     private void setOnNewsClickAction(View view, NewsArticle newsArticle) {
-        view.setOnClickListener(v -> StartChromeCustomTab(newsArticle.getUrl()));
+        view.setOnClickListener(v -> startChromeCustomTab(newsArticle.getUrl()));
     }
 
-    private void StartChromeCustomTab(String url) {
+    private void startChromeCustomTab(String url) {
         CustomTabsIntent.Builder builder = new CustomTabsIntent.Builder();
         builder.setToolbarColor(context.getResources().getColor(R.color.colorPrimary));
         CustomTabsIntent customTabsIntent = builder.build();
@@ -84,5 +90,9 @@ public class TopHeadlinesAdapter extends RecyclerView.Adapter<TopHeadlinesAdapte
             ButterKnife.bind(this, itemView);
         }
 
+    }
+
+    public interface DataUpdatedListener {
+        void onDataUpdated();
     }
 }

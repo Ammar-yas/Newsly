@@ -8,7 +8,7 @@ public abstract class BasePresenter {
 
     protected static final String APP_TOKEN  = "bd25d8ed9612481a93da6f19d8dfec9d";
 
-    public BasePresenter(Context context) {
+    protected BasePresenter(Context context) {
         // TODO: this initialization should be move to app OnCreate Method
         AndroidNetworking.initialize(context.getApplicationContext());
     }

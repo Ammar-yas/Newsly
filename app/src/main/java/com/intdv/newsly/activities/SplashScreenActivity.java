@@ -15,7 +15,7 @@ import butterknife.ButterKnife;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
-    private final static int SPLASH_DISPLAY_LENGTH = 2000;
+    private static final int SPLASH_DISPLAY_LENGTH = 2000;
     @BindView(R.id.splashAppNameTV)
     TextView appNameTv;
 
